@@ -15,10 +15,12 @@ gulp.task('icons', () => (
 			className: '%f',
 			templates: [
 				path.join(__dirname, '../node_modules/stylus-svg-size-template/svg-size.styl'),
-				'default-svg'
+				'default-svg',
+				'default-demo'
 			]
 		}))
 		.pipe(gulpIf(/\.styl$/, gulp.dest('app/styles/helpers')))
+		.pipe(gulpIf(/\.html$/, gulp.dest('dist')))
 		.pipe(gulpIf(/\.svg$/, rename('icon.svg')))
 		.pipe(gulpIf(/\.svg$/, gulp.dest('dist/assets/images/')))
 ));
