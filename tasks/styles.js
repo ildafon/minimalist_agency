@@ -11,6 +11,8 @@ import nano from 'gulp-cssnano';
 import rename from 'gulp-rename';
 import sourcemaps from 'gulp-sourcemaps';
 import errorHandler from 'gulp-plumber-error-handler';
+import jeet from 'jeet';
+import nib from 'nib';
 
 const isDebug = process.env.NODE_ENV !== 'production';
 
@@ -21,6 +23,8 @@ gulp.task('styles', () => (
 		.pipe(stylus({
 			use: [
 				importIfExist(),
+				nib(),
+				jeet(),
 				rupture(),
 				autoprefixer()
 			],

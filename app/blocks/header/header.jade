@@ -1,0 +1,9 @@
+mixin header(data)
+	+b.header
+		+e.logo
+			+b.logo--yandex(src= 'atom/logo.png')
+
+		+e.title
+			+b('span').title-dash= ' -  '
+			+b('span').title--main= `${data.t1}`
+

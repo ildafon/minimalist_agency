@@ -1,0 +1,9 @@
+mixin promo(data)
+	+b.promo
+		+e.text
+			+b.promo-text_p1= `${data.t2}`
+			+b.promo-text_p2= `${data.t3}`
+
+		+e.video
+			+b.promo-button
+			+b.promo-prompt= `${data.t4}`

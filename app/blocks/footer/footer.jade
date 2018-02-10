@@ -1,0 +1,19 @@
+mixin footer(data)
+	+b.footer
+		+e.left-side
+			+b.footer-text-1= `${data.t14}`
+			+b.footer-text-2= `${data.t15}`
+			+b.socials
+				+e.fb
+				+e.vk
+				+e.tw
+				+e.yt
+				+e.hb
+				+e.ig
+
+
+			+b.help= `${data.t16}`
+			+b.feedback= `${data.t17}`
+			+b.copyright= `${data.t18}`
+		+e.logo
+			+b.logo--atom(src= 'atom/logo-atom.png')

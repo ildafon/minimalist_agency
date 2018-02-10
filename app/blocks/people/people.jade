@@ -1,0 +1,19 @@
+include ../person-card/person-card
+include ../personal-card-short/personal-card-short
+mixin people(data, isFull)
+	+b.people
+		+e.person1
+			if isFull
+				+person-card('atom/person1.png', data.t5, data.t51)
+			else
+				+person-card-short('atom/person1.png', data.t5)
+		+e.person2
+			if isFull
+				+person-card('atom/person2.png', data.t6, data.t61)
+			else
+				+person-card-short('atom/person2.png', data.t6)
+		+e.person3
+			if isFull
+				+person-card('atom/person3.png', data.t7, data.t71)
+			else
+				+person-card-short('atom/person3.png', data.t7)
