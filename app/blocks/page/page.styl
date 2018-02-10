@@ -1,18 +1,28 @@
+html
+	background-color black
 body
 	font-size 1em
 	line-height 1.5em
+
 
 .page
 	center(993px)
 	position relative
 	padding-y(18px)
 	background-color white
-	background url('atom/atom-promo.png') no-repeat
+
 
 	&__frame
-		border  2px solid black
-		box-sizing border-box
 		center(954px)
 		background-color #72c4f6
+		border  2px solid black
 
+
+	&__bg
+		position absolute
+		top 90px
+		span()
+
+.atom-promo
+	sprite($atom_promo)
 
