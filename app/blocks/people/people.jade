@@ -4,16 +4,16 @@ mixin people(data, isFull)
 	+b.people
 		+e.person1
 			if isFull
-				+person-card('atom/person1.png', data.t5, data.t51)
+				+person-card('person-card__avatar-1', data.t5, data.t51)
 			else
-				+person-card-short('atom/person1.png', data.t5)
+				+person-card-short('person-card-short__avatar-1', data.t5)
 		+e.person2
 			if isFull
-				+person-card('atom/person2.png', data.t6, data.t61)
+				+person-card('person-card__avatar-2', data.t6, data.t61)
 			else
-				+person-card-short('atom/person2.png', data.t6)
+				+person-card-short('person-card-short__avatar-2', data.t6)
 		+e.person3
 			if isFull
-				+person-card('atom/person3.png', data.t7, data.t71)
+				+person-card('person-card__avatar-3', data.t7, data.t71)
 			else
-				+person-card-short('atom/person3.png', data.t7)
+				+person-card-short('person-card-short__avatar-3', data.t7)
