@@ -1,5 +1,6 @@
 mixin person-card(avatar, fullname, about)
-	+b.person-card
-		+e.avatar(class= `${avatar}`)
-		+e.fullname= `${fullname}`
-		+e.about=	`${about}`
+	+b('label')(for=`${avatar}`)
+		+b.person-card
+			+e.avatar(class= `${avatar}`)
+			+e.fullname= `${fullname}`
+			+e.about=	`${about}`

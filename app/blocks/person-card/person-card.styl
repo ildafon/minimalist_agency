@@ -2,8 +2,10 @@
 	center()
 
 	&__avatar
+		position relative
 		column(2/4 4/12, 1/4)
 		margin-bottom spacers(1)
+
 	&__avatar-1
 			sprite($person1)
 	&__avatar-2
@@ -22,3 +24,34 @@
 		column(1)
 		line-height spacers(1.5)
 		text-align center
+
+		visibility hidden
+
+	&__avatar:before
+		sprite($person_hover)
+		position absolute
+		top -6%
+		left -5.5%
+		content ''
+
+		visibility hidden
+
+
+.person-card:hover .person-card__avatar:before
+	visibility visible
+
+
+
+#person-card__avatar-1:checked ~ .page__frame
+	background-color #72c4f6
+
+#person-card__avatar-2:checked ~ .page__frame
+	background-color #ff8283
+
+#person-card__avatar-3:checked ~ .page__frame
+	background-color #ffe05d
+
+#person-card__avatar-1:checked  ~ .page__frame label[for='person-card__avatar-1'] .person-card__about,
+#person-card__avatar-2:checked  ~ .page__frame label[for='person-card__avatar-2'] .person-card__about,
+#person-card__avatar-3:checked  ~ .page__frame label[for='person-card__avatar-3'] .person-card__about
+	visibility visible

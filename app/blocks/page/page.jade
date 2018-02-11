@@ -1,5 +1,8 @@
 mixin page()
 	+b('body').page
+		+b('input')#person-card__avatar-1.choise(type='radio' name='people' value='person1')
+		+b('input')#person-card__avatar-2.choise(type='radio' name='people' value='person2')
+		+b('input')#person-card__avatar-3.choise(type='radio' name='people' value='person3')
 		+e.frame
 			block
 		+e.bg

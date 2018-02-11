@@ -2,8 +2,19 @@
 	center()
 
 	&__avatar
+		position relative
+
 		column(2/4 4/12, 1/4)
 		margin-bottom spacers(.5)
+
+	&__avatar:before
+		sprite($person_hover)
+		position absolute
+
+		top -6%
+		left -5.5%
+		display none
+		content ''
 
 	&__avatar-1
 		sprite($person1)
