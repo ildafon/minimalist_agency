@@ -16,6 +16,11 @@ import nib from 'nib';
 
 const isDebug = process.env.NODE_ENV !== 'production';
 
+gulp.task('fonts', () => (
+	gulp.src('app/styles/helpers/fonts/*')
+		.pipe(gulp.dest('dist/assets/styles/fonts'))
+));
+
 gulp.task('styles', () => (
 	gulp.src('app/styles/*.styl')
 		.pipe(plumber({errorHandler: errorHandler(`Error in \'styles\' task`)}))
